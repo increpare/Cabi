@@ -1,6 +1,6 @@
 # Cabi
 Arduboy encoder:
-Monochrome rle encoding by Zep
+Monochrome rle encoding by [Zep @lexaloffle](https://twitter.com/lexaloffle)
 
 to build:
 ```
