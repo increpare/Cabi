@@ -2,18 +2,26 @@
 Arduboy encoder:
 Monochrome rle encoding by [Zep @lexaloffle](https://twitter.com/lexaloffle)
 
+This tool is used for creating a compressed array from an image (png)
+
+The function to decompress in Arduino (Arduboy) can be found here:
+
+https://github.com/TEAMarg/drawCompressed
+
 to build:
-```
+```Bash
 gcc cabi.c lodepng.c -o cabi
 ```
 
 to use:
-```
+```Bash
 cabi input_file.png [array_name_prefix]
 ```
 
+Look at the compress ratio, before using the compressed data, it might be worse in some cases (above 1 is bad)
+
 ouput:
-```
+```C++
 // input_file.png  width: 128 height: 48
 const uint8_t PROGMEM array_name_prefix[] = {
   0x7f,0x2f,0x30,0x68,0xb7,0xdb,0xed,0xdb,0x53,0x9f,0xfa,0x73,0x97,0xbb,0xd5,0xe7,
