@@ -236,7 +236,7 @@ static void putval(int val, int bits)
 // write a span length
 // a string of bits encoding the number of bits needed to encode the length,
 // and then the length.
-static int putsplen(int len)
+static void putsplen(int len)
 {
 	int blen = 1; // how bits needed to encode length
 	while ((1 << blen) <= len)
